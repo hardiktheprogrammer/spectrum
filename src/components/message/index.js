@@ -150,7 +150,7 @@ class Message extends React.Component<Props> {
     const searchObj = queryString.parse(location.search);
     const { m = null } = searchObj;
     const isSelected = m && m === selectedMessageId;
-    const isOptimistic =
+    const isOptimistic ==>
       message && typeof message.id === 'number' && message.id < 0;
     return (
       <ConditionalWrap
